@@ -17,3 +17,14 @@ services:
     volumes:
       - ./:/app:rw
       - /app/.venv  # exclude .venv from the volume mount
+  build:
+    extends:
+      service: ci
+    volumes:
+      - ./dist:/app/dist:rw
+    command:
+      - uv
+      - run
+      - python
+      - -m
+      - build

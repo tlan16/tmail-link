@@ -1,7 +1,7 @@
 [project]
-name = "tmail-link"
-version = "0.1.0"
-description = "Add your description here"
+name = "tmail-link-client"
+version = "0.2.0"
+description = "an python client of disposable temporary email provider https://tmail.link"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

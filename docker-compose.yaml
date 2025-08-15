@@ -2,8 +2,7 @@
 services:
   ci:
     build:
-      context: ..
-      dockerfile: tests/Dockerfile
+      context: .
     working_dir: /app
     environment:
       - CI
@@ -16,5 +15,5 @@ services:
     extends:
       service: ci
     volumes:
-      - ../:/app:rw
+      - ./:/app:rw
       - /app/.venv  # exclude .venv from the volume mount

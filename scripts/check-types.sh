@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-docker compose --file 'tests/docker-compose.yaml' \
+docker compose \
   run --rm --build ci \
     uv run pyright\
 ;

@@ -2,14 +2,14 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-docker compose --file 'tests/docker-compose.yaml' build app
+docker compose build app
 
-docker compose --file 'tests/docker-compose.yaml' \
+docker compose \
   run --rm app \
     uv run ruff format\
 ;
 
-docker compose --file 'tests/docker-compose.yaml' \
+docker compose \
   run --rm app \
     uv run ruff check --fix\
 ;

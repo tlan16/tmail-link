@@ -1,0 +1,48 @@
+# Support Python 3.13+.
+target-version = "py313"
+line-length = 120
+indent-width = 4
+
+# Exclude specific directories and files
+exclude = [
+  ".git",
+  ".venv",
+  "venv",
+  "env",
+  "deploy",
+  "auto",
+  "docs",
+  "__pycache__",
+  ".ruff_cache",
+]
+
+[lint]
+select = [
+  # pycodestyle
+  "E",
+  # Pyflakes
+  "F",
+  # pyupgrade
+  "UP",
+  # flake8-bugbear
+  "B",
+  # flake8-simplify
+  "SIM",
+  # isort
+  "I",
+  # flake8-annotations-type-hints
+  "ANN",
+  # missing-newline-at-end-of-file
+  "W292",
+]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+[format]
+# Common configurations similar to Black
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"

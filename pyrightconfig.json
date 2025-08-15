@@ -1,0 +1,18 @@
+{
+  "include": [
+    "src",
+    "test"
+  ],
+  "exclude": [
+    "**/__pycache__"
+  ],
+  "defineConstant": {
+    "DEBUG": true
+  },
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonPlatform": "Linux",
+  "reportMissingImports": false,
+  "reportMissingTypeStubs": "error",
+  "typeCheckingMode": "standard"
+}

@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Project specific files
+/.env
+
+# Others
+.idea/
+.vscode/
+
+# Docker specific
+Dockerfile
+docker-compose.yml
+.git
+.gitignore
+.dockerignore

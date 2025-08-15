@@ -8,6 +8,7 @@ async def test_create_account() -> None:
     client = TmailClient()
     await client.create_account()
 
+
 @pytest.mark.asyncio
 async def test_get_emails() -> None:
     import os
@@ -22,6 +23,7 @@ async def test_get_emails() -> None:
     path = Path(__file__).parents[1] / ".env"
     if path.is_file():
         from dotenv import load_dotenv
+
         load_dotenv(path)
 
     smtp_username = os.environ.get("SMTP_USERNAME")
@@ -46,7 +48,7 @@ async def test_get_emails() -> None:
         smtp.sendmail(
             from_addr=smtp_sender,
             to_addrs=[client.email],
-            msg=f"Subject: Test Email\n\n{email_body}"
+            msg=f"Subject: Test Email\n\n{email_body}",
         )
 
     while True:
